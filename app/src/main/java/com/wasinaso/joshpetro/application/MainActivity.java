@@ -11,8 +11,8 @@ import android.view.MenuItem;
 import com.josh_petro.hudlu.R;
 
 public class MainActivity extends ActionBarActivity {
-    //private RecyclerView mRecyclerView;
-    //private RecyclerView.Adapter mAdapter
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +60,11 @@ public class MainActivity extends ActionBarActivity {
             // use a linear layout manager
             mLayoutManager = new LinearLayoutManager(this);
             mRecyclerView.setLayoutManager(mLayoutManager);
+
+            // specify an adapter (see also next example)
+            //mAdapter = new MyAdapter(myDataset);
+            mRecyclerView.setAdapter(mAdapter);
+
 
 
         }
